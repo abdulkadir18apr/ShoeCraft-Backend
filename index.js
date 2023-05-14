@@ -43,5 +43,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Todo Listneing on port ${port}`)
+  console.log(`ShoeCraft Listneing on port ${port}`)
 })
