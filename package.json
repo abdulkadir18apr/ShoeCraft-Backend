@@ -1,0 +1,26 @@
+{
+  "name": "shoecraft-backend",
+  "version": "1.0.0",
+  "description": "A api based backend for ShoeCraft eCommerce Appplication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulkadir18apr/ShoeCraft-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulkadir18apr/ShoeCraft-Backend/issues"
+  },
+  "homepage": "https://github.com/abdulkadir18apr/ShoeCraft-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.1",
+    "nodemon": "^2.0.22"
+  }
+}
