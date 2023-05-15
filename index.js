@@ -5,9 +5,6 @@ const connectToMongo=require("./db");
  connectToMongo();
 
 
-
-
-
 var cors = require('cors')
 
 const app = express();
@@ -36,6 +33,7 @@ app.use(express.json())
 
 //Routes
 
+app.use("/api/auth",require("./routes/auth"));
 
 
 app.get('/', (req, res) => {
