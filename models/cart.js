@@ -10,7 +10,7 @@ const cartSchema=new Schema({
     },
     products:[
         {
-            product:{type:mongoose.Types.ObjectId,ref:'products'},
+            product:{type:mongoose.Types.ObjectId,ref:'Product'},
             quantity:{type:Number,default:1}
         }
     ]

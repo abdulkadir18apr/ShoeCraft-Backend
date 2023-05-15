@@ -46,7 +46,8 @@ router.get("/cart",requireAuth,async(req,res)=>{
         if(!cart){
             return res.status(400).json({success:false,error:"No user Found"});
         }
-        return res.json({success:true,cart});
+        const cartProducts=await Cart.findOne({user:req.user.id}).populate('products.product')
+        return res.json({success:true,cart:cartProducts});
 
     }
     catch(err){
