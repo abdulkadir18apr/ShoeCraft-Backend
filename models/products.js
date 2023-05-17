@@ -43,6 +43,13 @@ const productSchema = new mongoose.Schema({
   featured: {
     type: Number
   },
+  rating:{
+    type:Number,
+    default:function(){
+        return Math.floor(Math.random() * 5) + 1;
+      }
+  }
+
 });
 
 const Product = mongoose.model('Product', productSchema,"Products");
