@@ -24,8 +24,7 @@ router.post("/signup",[body('email','Invalid Email').isEmail(),body('password','
         const salt=await bcrypt.genSalt(10);
         const secPass=await bcrypt.hashSync(req.body.password,salt);
         user=await User.create({
-            firstname:req.body.firstName,
-            lastName:req.body.lastName,
+            name:req.body.name,
             email:req.body.email,
             password:secPass
         });
@@ -68,7 +67,7 @@ router.post("/login",[body('email','Invalid Email').isEmail(),body('password','p
         }
         const authToken=jwt.sign(data,process.env.JWT_KEY);
         success=true;
-        res.json({success,authToken});
+        res.json({success,authToken,user});
 
 
     }
