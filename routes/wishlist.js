@@ -43,7 +43,7 @@ router.get("/",requireAuth,async(req,res)=>{
         if(!wishlist){
             return res.status(400).json({success:false,msg:"No wishlist Found"});
         }
-        const wishlistProducts=await Wishlist.find({user:req.user.id}).populate('products');
+        const wishlistProducts=await Wishlist.findOne({user:req.user.id}).populate('products');
         return res.json({success:true,wishlist:wishlistProducts});
     }
     catch(err){
