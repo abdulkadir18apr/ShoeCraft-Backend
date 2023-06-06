@@ -38,6 +38,7 @@ app.use("/api/products",require("./routes/products"));
 app.use("/api/category",require("./routes/category"));
 app.use("/api/user",require("./routes/cart"));
 app.use("/api/user/wishlist",require("./routes/wishlist"));
+app.use("/api/user/address",require("./routes/address"));
 
 
 app.get('/', (req, res) => {
